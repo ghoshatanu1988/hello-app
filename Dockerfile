@@ -1,5 +1,5 @@
-FROM karthick2007/ubuntu-tomcat-postgres
+# Pull Base image
+From tomcat:8-jre8
 
-COPY ./AVNCommunication-1.0.war /usr/local/tomcat/webapps
 
-CMD ["/usr/local/tomcat/bin/catalina.sh","run"]
+COPY ./webapp/target/webapp.war /usr/local/tomcat/webapps
